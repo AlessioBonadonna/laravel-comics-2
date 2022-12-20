@@ -1,4 +1,10 @@
 @extends('layouts.app')
+
+@section('page-title', 'Laravel Comics')
+
 @section('content')
-    <h1>boia deg</h1>
+    <section class="container home text-center">
+        <h1 class="display-5 fw-bold mt-5"><a href="{{ route('comics.index') }}"> DC Comics </a></h1>
+        <a href="{{ route('comics.create') }}">Carica il tuo Comic</a>
+    </section>
 @endsection
