@@ -68,4 +68,3 @@
         </div>
     </section>
 @endsection
-Footer
