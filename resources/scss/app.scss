@@ -1,1 +1,363 @@
-@import '~bootstrap/scss/bootstrap'
+@use '../scss/_variables' as *;
+@import '~bootstrap/scss/bootstrap';
+
+
+body {
+    font-family: sans-serif;
+}
+
+.home {
+    height: 400px;
+}
+
+.f-size {
+    font-size: 11px;
+}
+
+header {
+    height: 120px;
+
+    .links a {
+        text-decoration: none;
+        color: $blacktext;
+        height: 40px;
+        padding-bottom: 48px;
+       
+
+        &.active,
+        &:hover {
+            color: $bluelink;
+            border-bottom: 5px solid $bluelink;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+// #jumbo {
+//     background: url('../imgages/jumbotron.jpg') no-repeat;
+//     background-size: cover;
+
+//     div.jumbo {
+//         position: relative;
+//         height: 400px;
+//     }
+// }
+#jumbo {
+    background-image: url(../images/jumbotron.jpg);
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+
+    #current {
+        position: absolute;
+        bottom: -10px;
+        left: 50px;
+        color: white;
+        padding: 15px;
+        border: none;
+    }
+}
+
+
+.main {
+    background-color: $bgblack;
+    position: relative;
+
+    span {
+            position: absolute;
+            top: -37px;
+            left: 16%;
+            padding: 20px 30px;
+            background-color: $bluelink;
+            text-transform: uppercase;
+            color: $whitetext;
+            font-weight: bold;
+            font-size: 25px;
+        }
+   
+    .container-comics {
+        padding-top: 3.5rem;
+        padding-bottom: 7rem;
+
+        .comics-main {
+            padding: 1rem;
+
+            .row {
+                row-gap: 70px;
+
+                .my-card {
+                    height: 200px;
+                    width: calc(100% / 6);
+            
+                    .img-box {
+                       
+                        height: 95%;
+                        overflow-y: hidden;
+                    }
+            
+                    p {
+                        margin-top: 15px;
+                        width: 85%;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-box {
+        display: flex;
+        justify-content: center;
+
+        button {
+            border: 0;
+            background-color: $bluelink;
+            padding: 10px 55px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            color: $whitetext;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background-color: $bluetext;
+            }
+        }
+    }
+}
+
+.blue-banner {
+    background-color: $bluelink;
+
+    ul {
+        height: 150px;
+        padding: 0 25px;
+
+        li a {
+            display: inline-block;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $whitetext;
+            font-size: 0.9rem;
+            
+    
+            .logo-blue {
+                height: 6vh;
+            }
+
+            .logo-blue-svg {
+                height: 5vh;
+            }
+    
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+
+}
+
+footer {
+    .first-footer {
+        background: url('../images/footer-bg.jpg') no-repeat;
+        background-size: cover;
+        overflow-y: hidden;
+
+        .container-list {
+            height: 39vh;
+            margin-bottom: -20px;
+
+            .box-list {
+                display: flex;
+                flex-flow: wrap;
+
+                .list {
+                    width: calc((100% - 50px) / 3);
+                }
+
+                .list:first-child {
+                    margin-right: 50px;
+                }
+
+                .list:last-child {
+                    margin-top: -90px;
+                }
+            }
+
+            h3 {
+                color: $whitetext;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+
+            ul {
+                list-style: none;
+
+                li a {
+                    display: inline-block;
+                    text-decoration: none;
+                    color: $textgray;
+                    font-size: 0.8rem;
+                    margin-bottom: 2px;
+                }
+            }
+
+        }
+
+        .container {
+
+            p {
+                color: $textgray;
+                font-size: 0.8rem;
+        
+                a {
+                    text-decoration: none;
+                }
+            }
+
+        }
+        
+    }
+
+    .second-footer {
+        background-color: $bgfooter;
+
+
+        .container {
+            height: 100px;
+
+            button {
+                border: 2px solid $bluelink;
+                background-color: $bgfooter;
+                padding: 15px;
+                font-size: 1.1rem;
+                text-transform: uppercase;
+                color: $whitetext;
+            }
+
+            .social {
+
+                span {
+                    color: $bluelink;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                }
+
+                span,
+                img {
+                    margin-right: 20px;
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+}
+
+.blue {
+    background-color: $blue;
+    height: 70px;
+    position: relative;
+}
+
+.box-single-img {
+    position: absolute;
+    bottom: 0;
+    left:250px;
+    border: 1px solid $whitetext;
+
+    .comic {
+        position: absolute;
+        text-transform: uppercase;
+        background-color: $blue-single;
+        color: $whitetext;
+        padding: 0 5px;
+        font-size: 13px;
+    }
+
+    .view {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        text-transform: uppercase;
+        background-color: $blue-single;
+        color: $whitetext;
+        padding: 0 5px;
+        font-size: 13px;
+    }
+}
+
+h1 {
+    color: $bluetext;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.container-available {
+    background-color: $green-bg;
+    font-weight: bold;
+    border-bottom: 1px solid #357739;
+
+    p {
+        display: inline-block;
+        margin: 0;
+        color: $greentext;
+    }
+
+    .available-price {
+        padding: 17px 25px 13px;
+    }
+
+    .price {
+        color: $whitetext;
+    }
+
+    .status {
+        margin-left: auto;
+    }
+
+    .available {
+        padding: 17px 25px 13px;
+    }
+
+    .check {
+        position: relative;
+        color: $whitetext;
+        text-decoration: none;
+        border-left: 1px solid black;
+        padding: 17px 25px 13px;
+        padding-right: 42px;
+        cursor: pointer;
+    }
+
+    .check:after {
+        content: ".";
+        display: block;
+        font-size: 0;
+        position: absolute;
+        right: 19px;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-top: 6px solid white;
+        border-right: 4px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+}
+
+.description {
+    color: $textgray;
+    font-size: 17px;
+}
+
+.adv {
+    margin-top: -70px;
+    color: $textgray;
+}

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page-title', 'Laravel Comics')
+@section('page-title', 'Comics')
 
 @section('content')
     <section class="container home text-center">

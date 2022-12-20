@@ -8,7 +8,7 @@ return [
         ],
         [
             "text" => "comics",
-            "url" => "comics",
+
             "url" => "comics.index",
             "active" => false,
         ],

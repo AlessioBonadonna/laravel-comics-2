@@ -1,3 +1,8 @@
+<?php
+$links = config('navlink.navbar');
+?>
+
+
 <div class="bg-primary   flex-end ">
     <div class="container">
         <ul class=" text-white d-flex list-unstyled">
@@ -15,7 +20,12 @@
     </div>
     <nav class="navbar-nav container ">
         <ul class="list-unstyled d-flex justify-content-center gap-2 text-uppercase">
-            <li></li>
+            @foreach ($links as $list)
+                <li>
+                    <a class="text-capitalize text-decoration-none text-black"
+                        href="{{ $list['url'] }}">{{ $list['text'] }}</a>
+                </li>
+            @endforeach
 
         </ul>
     </nav>
