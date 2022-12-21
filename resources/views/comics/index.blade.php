@@ -9,14 +9,21 @@
             <div class="comics-main">
                 <div class="row d-flex flex-wrap">
                     @foreach ($comics as $key => $comic)
-                        <div class="my-card">
+                        <div class="my-card my-5">
                             <div class="img-box">
-                                <a href="{{ route('comics.show', $key + 1) }}">
+                                <a href="{{ route('comics.show', $comic->id) }}">
                                     <img src="{{ $comic['thumb'] }}" alt="">
                                 </a>
                             </div>
 
-                            <p class="text-white">{{ $comic['series'] }}</p>
+                            <a href="{{ route('comics.show', $comic->id) }}">
+                                <p class="text-white">{{ $comic['series'] }}</p>
+                            </a>
+                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE');
+                                <button type="submit" class='btncancella mt-3 btn btn-danger'>cancella</button>
+                            </form>
                         </div>
                     @endforeach
                 </div>

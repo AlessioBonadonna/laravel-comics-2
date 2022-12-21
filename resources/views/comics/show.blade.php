@@ -36,6 +36,12 @@
             </div>
         </div>
 
+
+        <a href="{{ route('comics.edit', $comics->id) }}">
+            <button type="submit" class='btncancella mt-3 btn btn-success'>modifica</button>
+        </a>
+
+
     </div>
 
 @endsection

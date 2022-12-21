@@ -15,7 +15,10 @@ $links = config('navlink.navbar');
 <header class="bg-white container d-flex align-items-center">
     <div>
 
-        <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="">
+        <a href="{{ route('home') }}">
+
+            <img src="{{ Vite::asset('resources/images/dc-logo.png') }}" alt="">
+        </a>
 
     </div>
     <nav class="navbar-nav container ">
